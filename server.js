@@ -4,10 +4,8 @@
  * 支持: 合作模式(Co-op) / 对战模式(PvP)
  */
 
-// ─── 模块路径修复（解决 Windows 文件锁问题） ───
+// ─── 模块路径 ───
 const _pwModPaths = [
-  'D:\\ClaudeMCP\\projects\\pw_temp\\node_modules',
-  'D:\\ClaudeMCP\\projects\\Pixel_Wizard_Game\\node_modules',
   require('path').resolve(__dirname, 'node_modules'),
 ].filter(p => { try { require('fs').accessSync(p); return true; } catch(e) { return false; } });
 _pwModPaths.forEach(p => module.paths.push(p));

@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
+    "start:public": "node server.js --public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
