@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Pixel Wizard RPG - 像素巫师水晶 Quest</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a1a;display:flex;justify-content:center;align-items:center;min-height:100vh;min-height:100dvh;font-family:'Courier New',monospace;overflow:hidden;touch-action:none;-webkit-user-select:none;user-select:none}
+canvas{border:4px solid #ffcc00;border-radius:4px;box-shadow:0 0 60px rgba(255,204,0,0.2);image-rendering:pixelated;cursor:crosshair;touch-action:none}
+@media(orientation:landscape){canvas{height:min(100dvh-20px,66.67vw);width:min(100vw-20px,150dvh)}}
+@media(orientation:portrait){canvas{width:100vw;height:66.67vw;max-height:40vh}}
+</style>
+</head>
+<body><canvas id="game"></canvas>
+<script>
+// Bootstrap: set canvas size, then load modules
+const canvas = document.getElementById('game');
+canvas.width = 960;
+canvas.height = 640;
+</script>
+
+<!-- Module loading order: dependencies first -->
+<script src="js/config.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/save.js"></script>
+<script src="js/entities.js"></script>
+<script src="js/quest.js"></script>
+<script src="js/renderer.js"></script>
+<script src="js/input.js"></script>
+<script src="js/network.js"></script>
+<script src="js/game.js"></script>
+
+<script>
+// Start the game
+Game.preload();
+</script>
+</body>
+</html>
